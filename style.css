@@ -4,16 +4,53 @@
     box-sizing: border-box;
 }
 
-.safak-container {
+body {
+    margin: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
 }
 
-.safak-form {
-    width: 50rem;
+.safak-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    padding: 5rem 3rem;
+    font-family: 'Nunito', sans-serif;
+    box-shadow: 0 -1px 8px 2px rgba(0,0,0, .1);
+}
+
+.error-message {
+    position: absolute;
+    top: 1rem;
+    width: auto;
+    background-color: #ff6c6c;
+    color: #f9f9f9;
+    font: 600 18px/24px inherit;
+    padding: .8rem 5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    border-radius: 25px;
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
+.star {
+    color: red;
+    font-size: 20px;
+}
+
+.safak-text{
+    padding-bottom: 1rem;
+}
+
+.safak-title {
+    margin-bottom: 1.5rem;
 }
 
 .safak-wrapper {
@@ -22,13 +59,171 @@
     margin-bottom: 2rem;
 }
 
-.safak-wrapper label{
-   width: 100%;
-    margin: .5rem 1rem;
-
+.safak-wrapper label p {
+    margin-bottom: .5rem;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 30px;
 }
 
-.safak-wrapper label input, .safak-wrapper label select{
+.safak-buttons {
+    display: flex;
+    justify-content: center;
+    margin: .5rem;
+}
+
+.safak-wrapper label{
+   width: 100%;
+   margin: .5rem;
+}
+
+.safak-wrapper label input, .safak-wrapper select{
     width: 100%;
-    padding: .7rem 1rem;
+    padding: .8rem 1rem;
+    font-size: 17px;
+    border: none;
+    box-shadow: 0 1px 8px -1px rgba(0, 0, 0, .3);
+    height: 3rem;
+}
+
+.safak-wrapper select:hover, .safak-wrapper input[type="date"]:hover, .safak-buttons input[type="button"]:hover,.safak-buttons input[type="submit"]:hover {
+    cursor: pointer;
+}
+
+.safak-buttons input[type="button"], .safak-buttons input[type="submit"] {
+    border: none;
+    background-color: #0092E0;
+    padding: .8rem 5rem;
+    font-weight: 600;
+    font-size: 20px;
+    margin: 0 2rem 2rem;
+    border-radius: 5px;
+    color: #fff;
+    transition: .2s opacity ease-in-out;
+}
+
+.safak-buttons input[type="button"]:hover, .safak-buttons input[type="submit"]:hover {
+    opacity: .8;
+}
+
+.safak-wrapper input:focus, .safak-wrapper select:focus{
+    outline: none;
+}
+
+/* TABLE */
+h3.safak-result {
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 1rem;
+}
+
+div.table-title {
+    display: block;
+    margin: auto;
+    max-width: 600px;
+    padding:5px;
+    width: 100%;
+}
+
+.table-title h3 {
+    color: #fafafa;
+    font-size: 30px;
+    font-weight: 400;
+    font-style:normal;
+    font-family: "Roboto", helvetica, arial, sans-serif;
+    text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+    text-transform:uppercase;
+}
+
+.table-fill {
+    background: white;
+    border-radius:3px;
+    border-collapse: collapse;
+    height: auto;
+    margin: auto;
+    max-width: 600px;
+    padding:5px;
+    width: 100%;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    animation: float 5s infinite;
+}
+
+tr {
+    border-top: 1px solid #C1C3D1;
+    border-bottom-: 1px solid #C1C3D1;
+    color:#666B85;
+    font-size:16px;
+    font-weight:normal;
+    text-shadow: 0 1px 1px rgba(256, 256, 256, 0.1);
+}
+
+tr:hover td {
+    background:#4E5066;
+    color:#FFFFFF;
+}
+
+tr:first-child {
+    border-top:none;
+}
+
+tr:last-child {
+    border-bottom:none;
+}
+
+tr:nth-child(odd) td {
+    background:#EBEBEB;
+}
+
+tr:nth-child(odd):hover td {
+    background:#4E5066;
+}
+
+tr:last-child td:first-child {
+    border-bottom-left-radius:3px;
+}
+
+tr:last-child td:last-child {
+    border-bottom-right-radius:3px;
+}
+
+td {
+    background:#FFFFFF;
+    padding:20px;
+    text-align:left;
+    vertical-align:middle;
+    font-weight:300;
+    font-size:18px;
+    text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+    border-right: 1px solid #C1C3D1;
+}
+
+td:last-child {
+    border-right: 0px;
+}
+
+td.text-left {
+    text-align: left;
+}
+
+td.text-right {
+    text-align: right;
+}
+
+/* Media Query */
+@media only screen and (max-width: 767px){
+    .safak-wrapper {
+        display: block;
+        margin-bottom: 0;
+    }
+
+    .safak-wrapper label {
+        margin: 0;
+    }
+
+    .safak-wrapper label p {
+        margin: 1rem 0;
+    }
+    .safak-buttons {
+        margin-top: 2rem;
+    }
 }
