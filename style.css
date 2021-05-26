@@ -27,9 +27,10 @@ body {
     top: 1rem;
     width: auto;
     background-color: #ff6c6c;
-    color: #f9f9f9;
-    font: 600 18px/24px inherit;
-    padding: .8rem 5rem;
+    color: #fff;
+    font-weight: 600;
+    font-size: 16px;
+    padding: .5rem 2rem;
     margin-bottom: 1rem;
     text-align: center;
     border-radius: 25px;
@@ -150,7 +151,7 @@ div.table-title {
 
 tr {
     border-top: 1px solid #C1C3D1;
-    border-bottom-: 1px solid #C1C3D1;
+    border-bottom: 1px solid #C1C3D1;
     color:#666B85;
     font-size:16px;
     font-weight:normal;
@@ -198,7 +199,7 @@ td {
 }
 
 td:last-child {
-    border-right: 0px;
+    border-right: 0;
 }
 
 td.text-left {
@@ -211,6 +212,11 @@ td.text-right {
 
 /* Media Query */
 @media only screen and (max-width: 767px){
+    .safak-container {
+        display: block;
+        width: 100%;
+    }
+
     .safak-wrapper {
         display: block;
         margin-bottom: 0;
@@ -225,5 +231,12 @@ td.text-right {
     }
     .safak-buttons {
         margin-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .safak-buttons input[type="button"], .safak-buttons input[type="submit"] {
+        width: 100%;
     }
 }
