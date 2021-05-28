@@ -125,11 +125,11 @@
                     </tr>
                     <tr>
                         <td class="text-left">Resmi Terhis Tarihi</td>
-                        <td class="text-left"><?php echo $leaveFormatTimeResult . ' ' . date('l', strtotime($leaveTimeResult)) . ' Günü'; ?></td>
+                        <td class="text-left"><?php echo $leaveFormatTimeResult . ' ' . $days[date('l', strtotime($leaveTimeResult))] . ' Günü'; ?></td>
                     </tr>
                     <tr>
                         <td class="text-left">TMİ (Terhis Mahiyetinde İzin)</td>
-                        <td class="text-left"><?php echo $tmiFormatResult . ' ' . date('l', strtotime($tmiResult)) . ' Günü'; ?></td>
+                        <td class="text-left"><?php echo $tmiFormatResult . ' ' . $days[date('l', strtotime($tmiResult))] . ' Günü'; ?></td>
                     </tr>
                     <tr>
                         <td class="text-left">TMİ'ye kalan süre</td>
